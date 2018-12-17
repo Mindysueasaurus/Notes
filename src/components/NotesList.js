@@ -17,7 +17,7 @@ export default class NotesList extends React.Component{
 
   componentDidMount() {
     axios
-      .get('http://localhost:8000/api/notes/')
+      .get('https://backend-notes.herokuapp.com/api/notes/')
       .then( response => {
         this.setState({ notes: response.data });
       })

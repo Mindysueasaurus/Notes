@@ -25,7 +25,7 @@ export default class Note extends React.Component {
 
   fetch = id => {
     axios
-      .get(`http://localhost:8000/api/notes/get/${id}`)
+      .get(`https://backend-notes.herokuapp.com/api/notes/get/${id}`)
       .then( response => {
         this.setState( ({ note: response.data }))
       })
@@ -41,7 +41,7 @@ export default class Note extends React.Component {
 
   delete = () => {
     axios
-    .delete(`http://localhost:8000/api/notes/delete/${this.state.note.id}`)
+    .delete(`https://backend-notes.herokuapp.com/api/notes/delete/${this.state.note.id}`)
     .then( () => this.props.history.push('/'))
     .catch( error => {
       console.error(error)

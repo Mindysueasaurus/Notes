@@ -29,7 +29,7 @@ export default class EditNote extends React.Component {
 
   selected = id => {
     axios 
-      .get(`http://localhost:8000/api/notes/get/${id}`)
+      .get(`https://backend-notes.herokuapp.com/api/notes/get/${id}`)
       .then( response => this.setState({ title: response.data.title, content: response.data.content, id: response.data.id}))
       .catch( error => console.log( error))
     }

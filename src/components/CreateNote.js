@@ -16,7 +16,7 @@ class CreateNote extends Component {
   addNote = event => {
     event.preventDefault();
     axios 
-      .post('http://localhost:8000/api/notes/create', this.state)
+      .post('https://backend-notes.herokuapp.com/api/notes/create', this.state)
       .then( () => this.props.history.push('/'))
       .catch( error => {
         console.error(error)
